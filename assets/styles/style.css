@@ -1,0 +1,291 @@
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@font-face {
+    font-family: 'PublicPixel';
+    src: url("../fonts/PublicPixel.ttf");
+}
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+body{
+    height: 100vh;
+    background-color: #0F172A;
+    cursor: none;
+}
+
+/*----------CURSOR------------*/
+
+.cursor-dot{
+    width: 5px;
+    height: 5px;
+    background-color: #2696E8;
+    box-shadow: 0 0 20px #2696E8, 0 0 60px #2696E8, 0 0 100px #2696E8;
+}
+
+.cursor-outline{
+    width: 30px;
+    height: 30px;
+    border: 2px solid #87c8de80;
+}
+
+.cursor-dot, .cursor-outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/*----------------------------*/
+
+.select-menu svg,
+.close-menu svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    filter: drop-shadow(0px 0px 20px rgba(15, 23, 42, 0.8));
+}
+
+.select-menu:hover svg path,
+.close-menu:hover svg line{
+    fill: #2696E8;
+    stroke: #2696E8;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.select-menu:hover svg circle,
+.close-menu:hover svg circle {
+    stroke: #2696E8;
+    transition: fill 0.5s ease;
+}
+
+.semicircle {
+    float: right;
+    width: 380px;
+    height: 380px;
+    background: rgba(105, 169, 192, 0.8);
+    border-radius: 0 0 0 100%;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 20px;
+    display: none;
+}
+
+.list{
+    margin-top: 20px;
+}
+
+.list ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    margin: 50px;
+    text-decoration: none;
+    font-family: 'PublicPixel'; 
+    font-size: 20px;
+    color: white;
+}
+
+.list li a{
+    transition: 500ms;
+    color: inherit;
+    text-decoration: none; 
+}
+
+.list li a:hover{
+    transition: 250ms;
+    color: #0F172A;
+    text-decoration: underline wavy rgb(255, 255, 255); 
+    filter: drop-shadow(0px 0px 15px #0F172A);
+
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.imagen-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.imagen-principal img {
+    width: 50%;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+.presentacion{
+    padding-top: 20px;
+}
+
+.titulo-presentacion h6{
+    text-align: center;
+    font-family: 'PublicPixel';
+    font-size: 35px;
+    width: 50%;
+    align-items: center;
+    align-items: center;
+    margin: auto;
+}
+
+.titulo-presentacion strong{
+    color: rgb(0, 255, 174);
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+.descripcion-presentacion p{
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'PublicPixel';
+    width: 55%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: 1.5;
+}
+
+.iconos-circulares {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.iconos-circulares .icono-circular {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.iconos-circulares .icono-circular img {
+    width: 100%;
+    height: 100%;
+}
+
+/*EXPERIENCIA*/
+
+.titulo-experiencia h6{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+    font-family: 'PublicPixel';
+    font-size: 35px;
+    width: 50%;
+    align-items: center;
+    align-items: center;
+    margin: auto;
+}
+
+.experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PublicPixel';
+}
+
+.cuadrados-experiencia {
+    width: calc(25% - 10px);
+}
+
+.cuadrado {
+    border: 2px solid white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: auto; /* Cambia de altura fija a automática */
+    flex-grow: 1; /* Para que los cuadrados se expandan según el contenido */
+}
+
+.cuadrado h5,
+.cuadrado p {
+    padding-top: 15px;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 1em; /* Tamaño de fuente relativo */
+    max-width: 80%; /* Ancho máximo del texto para que se ajuste al cuadro */
+}
+
+.cuadrado p{
+    font-size: 12px;
+}
+
+.cuadrado h5{
+    font-size: 17px;
+}
+
+.cuadrado p span{
+    color: #2696E8;
+}
+
+.line_one{
+    text-decoration: underline solid #ff0000 5px;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+.line_two{
+    text-decoration: underline solid #008000 5px;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+.line_three{
+    text-decoration: underline solid #ffff00 5px;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+.line_four{
+    text-decoration: underline solid #ffa500 5px;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+.icono {
+    width: 70px; /* Tamaño fijo del contenedor del icono */
+    height: 70px; /* Tamaño fijo del contenedor del icono */
+    overflow: hidden; /* Para ocultar cualquier parte del icono que se desborde */
+}
+
+.icono img {
+    width: 100%; /* Ocupar el 100% del ancho del contenedor */
+    height: 100%; /* Permitir que la altura se ajuste automáticamente para mantener la relación de aspecto */
+}
+
+.footer{
+    height: 100px;
+    width: 100%;
+}
