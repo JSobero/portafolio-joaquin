@@ -229,8 +229,8 @@ body{
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    height: auto; /* Cambia de altura fija a automática */
-    flex-grow: 1; /* Para que los cuadrados se expandan según el contenido */
+    height: 335px; /* Cambia de altura fija a automática */
+    /*flex-grow: 1; /* Para que los cuadrados se expandan según el contenido */
 }
 
 .cuadrado h5,
@@ -285,7 +285,24 @@ body{
     height: 100%; /* Permitir que la altura se ajuste automáticamente para mantener la relación de aspecto */
 }
 
-.footer{
-    height: 100px;
-    width: 100%;
+.footer {
+    text-align: center;
+    background: linear-gradient(to bottom, #0c1323, #000); /* Cambia el color de fondo a uno más oscuro */
+    padding: 20px 0; /* Espaciado interno */
+    padding-top: 40px;
+}
+
+/* Estilos de los íconos sociales */
+.social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 35px;
+}
+
+/* Estilos para el texto del footer */
+.footer-text {
+    color: #FFFFFF;
+    margin-top: 40px; /* Separación entre el texto y los íconos */
+    font-family: 'PublicPixel'; /* Cambia la fuente */
+    font-size: 12px; /* Tamaño de fuente */
 }
